@@ -73,7 +73,7 @@ kendo ui
 Current branches and their purposes are as follow.
 
 ```
-master -> contains latest changes
+main -> contains latest changes
 
 ```
 
