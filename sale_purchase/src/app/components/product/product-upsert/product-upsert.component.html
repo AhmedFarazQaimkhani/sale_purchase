@@ -1,0 +1,30 @@
+<div>
+  <!-- Product Form -->
+  <form class="k-form" [formGroup]="productForm">
+    <fieldset class="k-form-fieldset">
+      <legend class="k-form-legend">Product</legend>
+      <!-- Product Name Field -->
+      <kendo-formfield>
+        <kendo-label text="Product Name"></kendo-label>
+        <kendo-textbox formControlName="name" placeholder="Name"></kendo-textbox>
+      </kendo-formfield>
+      <!-- Product Price Field -->
+      <kendo-formfield>
+        <kendo-label text="Price"></kendo-label>
+        <kendo-numerictextbox #price formControlName="price" placeholder="Price">
+        </kendo-numerictextbox>
+      </kendo-formfield>
+      <!-- Product Description Field -->
+      <kendo-formfield>
+        <kendo-label text="Description"></kendo-label>
+        <kendo-textbox #description formControlName="description" name="description" placeholder="Description">
+        </kendo-textbox>
+      </kendo-formfield>
+      <!-- Product Action button Upsert -->
+      <div class="k-form-buttons">
+        <button kendoButton themeColor="primary" (click)="upsertProduct()">
+          Save </button>
+      </div>
+    </fieldset>
+  </form>
+</div>

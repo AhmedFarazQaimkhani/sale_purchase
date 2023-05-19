@@ -1,0 +1,33 @@
+<div>
+  <!-- Supplier, Customer and Product Filters -->
+  <!-- Supplier -->
+  <kendo-formfield>
+    <kendo-label text="Select Supplier"></kendo-label>
+    <kendo-dropdownlist [data]="suppliers" textField="name" valueField="id" (valueChange)="handleSuppliers($event)"
+      placeholder="Search a Supplier..."></kendo-dropdownlist>
+  </kendo-formfield>
+  <!-- Customer -->
+  <kendo-formfield>
+    <kendo-label text="Select Customer"></kendo-label>
+    <kendo-dropdownlist [data]="customers" textField="name" valueField="id" (valueChange)="handleCustomers($event)"
+      placeholder="Search a Customer..."></kendo-dropdownlist>
+  </kendo-formfield>
+  <!-- Product -->
+  <kendo-formfield>
+    <kendo-label text="Select Product"></kendo-label>
+    <kendo-dropdownlist [data]="products" textField="name" valueField="id" (valueChange)="handleProducts($event)"
+      placeholder="Search a Product..."></kendo-dropdownlist>
+  </kendo-formfield>
+  <!-- Invoice listing -->
+  <kendo-grid [data]="invoices">
+    <kendo-grid-column field="id" title="Id"></kendo-grid-column>
+    <kendo-grid-column field="totalAmount" title="Total Amount"></kendo-grid-column>
+    <kendo-grid-column field="invoiceDate" title="Invoice Date"></kendo-grid-column>
+    <!-- In a real time scenario we normally show name of a supplier, customer and product
+    Just for the idea I'm currently showing Id here like this
+    -->
+    <kendo-grid-column field="supplierId" title="Supplier"></kendo-grid-column>
+    <kendo-grid-column field="customerId" title="Customer"></kendo-grid-column>
+    <kendo-grid-column field="productId" title="Product"></kendo-grid-column>
+  </kendo-grid>
+</div>

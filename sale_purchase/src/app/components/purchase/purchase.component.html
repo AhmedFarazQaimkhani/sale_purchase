@@ -1,0 +1,20 @@
+<div>
+  <!-- Purchase Form -->
+  <form class="k-form" [formGroup]="purchaseForm">
+    <fieldset class="k-form-fieldset">
+      <legend class="k-form-legend">Purchase Product</legend>
+      <!-- Select Product to Purchase -->
+      <kendo-formfield>
+        <kendo-label [for]="product" text="Select Product"></kendo-label>
+        <kendo-dropdownlist #product formControlName="product" [data]="products" textField="name" valueField="id"
+          placeholder="Select product..."></kendo-dropdownlist>
+      </kendo-formfield>
+    </fieldset>
+    <!-- Action button to Purchase Product  -->
+    <div class="k-form-buttons">
+      <button kendoButton themeColor="primary" (click)="createPurchase()">
+        Purchase
+      </button>
+    </div>
+  </form>
+</div>

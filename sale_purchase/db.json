@@ -1,0 +1,133 @@
+{
+  "products": [
+    {
+      "name": "Product 112",
+      "price": 123,
+      "description": "This is Product 112",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 345,
+      "description": "This is Product 2"
+    },
+    {
+      "name": "PD 123",
+      "price": 1000,
+      "description": "Hello World",
+      "id": 3
+    },
+    {
+      "name": "Ahmed",
+      "price": 122,
+      "description": null,
+      "id": 4
+    },
+    {
+      "name": "Ahmed",
+      "price": 122,
+      "description": "Ahmed Added Product",
+      "id": 5
+    },
+    {
+      "name": "PD 12345",
+      "price": 90,
+      "description": "Hello My self ahmed",
+      "id": 6
+    },
+    {
+      "name": "asd",
+      "price": 12,
+      "description": "asdfg",
+      "id": 7
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Supplier 1"
+    },
+    {
+      "id": 2,
+      "name": "Supplier 2"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Customer 1",
+      "registered": true
+    },
+    {
+      "id": 2,
+      "name": "Customer 2",
+      "registered": false
+    },
+    {
+      "id": 2,
+      "name": "Customer 3",
+      "registered": true
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "supplierId": 1,
+      "customerId": 1,
+      "productId": 1,
+      "totalAmount": 123,
+      "invoiceDate": "2023-05-18T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "supplierId": 2,
+      "customerId": 2,
+      "productId": 2,
+      "totalAmount": 345,
+      "invoiceDate": "2023-05-18T00:00:00.000Z"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "productId": 1,
+      "customerId": 1,
+      "quantity": 1,
+      "saleDate": "2023-05-18T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "productId": 2,
+      "customerId": 2,
+      "quantity": 2,
+      "saleDate": "2023-05-18T00:00:00.000Z"
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
+  "purchases": [
+    {
+      "product": {
+        "name": "Ahmed",
+        "price": 122,
+        "description": null,
+        "id": 4
+      },
+      "id": 7
+    },
+    {
+      "product": {
+        "id": 2,
+        "name": "Product 2",
+        "price": 345,
+        "description": "This is Product 2"
+      },
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<kendo-tilelayout [columns]="4" [resizable]="true" [reorderable]="true">
+  <kendo-tilelayout-item title="Daily Sales and Purchases" [col]="1" [colSpan]="2">
+    <kendo-tilelayout-item-body>
+      <!-- Daily Sales and Puchases Chart -->
+      <kendo-chart>
+        <kendo-chart-title text="Daily Sales and Purchases"></kendo-chart-title>
+        <kendo-chart-category-axis>
+          <kendo-chart-category-axis-item [categories]="days">
+          </kendo-chart-category-axis-item>
+        </kendo-chart-category-axis>
+        <kendo-chart-series>
+          <kendo-chart-series-item *ngFor="let item of dailySeries" [name]="item.name" [data]="item.data">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+  <kendo-tilelayout-item title="Monthly Sales and Purchases" [colSpan]="3">
+    <kendo-tilelayout-item-body>
+      <!-- Monthly Sales and Puchases Chart -->
+      <kendo-chart>
+        <kendo-chart-title text="Monthly Sales and Purchases"></kendo-chart-title>
+        <kendo-chart-category-axis>
+          <kendo-chart-category-axis-item [categories]="months">
+          </kendo-chart-category-axis-item>
+        </kendo-chart-category-axis>
+        <kendo-chart-series>
+          <kendo-chart-series-item *ngFor="let item of monthlySeries" [name]="item.name" [data]="item.data">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+  <kendo-tilelayout-item title="Yearly Sales and Purchases" [col]="1" [colSpan]="12">
+    <kendo-tilelayout-item-body>
+      <!-- Yearly Sales and Puchases Chart -->
+      <kendo-chart>
+        <kendo-chart-title text="Yearly Sales and Purchases"></kendo-chart-title>
+        <kendo-chart-category-axis>
+          <kendo-chart-category-axis-item [categories]="years">
+          </kendo-chart-category-axis-item>
+        </kendo-chart-category-axis>
+        <kendo-chart-series>
+          <kendo-chart-series-item *ngFor="let item of yearlySeries" [name]="item.name" [data]="item.data">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+    </kendo-tilelayout-item-body>
+  </kendo-tilelayout-item>
+
+</kendo-tilelayout>

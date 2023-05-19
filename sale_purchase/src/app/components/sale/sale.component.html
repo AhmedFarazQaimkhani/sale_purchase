@@ -1,0 +1,37 @@
+<div>
+  <!-- Sales Form -->
+  <form class="k-form" [formGroup]="salesForm">
+    <fieldset class="k-form-fieldset">
+      <legend class="k-form-legend">Sale Product</legend>
+      <!-- Select Product Dropdown -->
+      <kendo-formfield>
+        <kendo-label [for]="productId" text="Select Product"></kendo-label>
+        <kendo-dropdownlist #productId formControlName="productId" [data]="products" textField="name" valueField="id"
+          placeholder="Select product...">
+        </kendo-dropdownlist>
+      </kendo-formfield>
+      <!-- Select Customer Dropdown -->
+      <kendo-formfield>
+        <kendo-label [for]="customerId" text="Select Customer"></kendo-label>
+        <kendo-dropdownlist #customerId formControlName="customerId" [data]="customers" textField="name" valueField="id"
+          placeholder="Select customer...">
+          <ng-template kendoDropDownListItemTemplate let-dataItem>
+            <span>{{dataItem.name}} ({{dataItem.registered ? 'Registered' : 'Unregistered'}})</span>
+          </ng-template>
+        </kendo-dropdownlist>
+      </kendo-formfield>
+      <!-- Select Quantity Dropdown -->
+      <kendo-formfield>
+        <kendo-label text="Select Quantity"></kendo-label>
+        <kendo-numerictextbox #quantity formControlName="quantity" [min]="1" placeholder="Quantity">
+        </kendo-numerictextbox>
+      </kendo-formfield>
+      <!-- Action button to Sale Product  -->
+      <div class="k-form-buttons">
+        <button kendoButton themeColor="primary" (click)="addSale()">
+          Sale
+        </button>
+      </div>
+    </fieldset>
+  </form>
+</div>
